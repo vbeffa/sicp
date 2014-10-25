@@ -1,5 +1,7 @@
 ; 1.1.7 Square Roots by Newton's Method
 
+; TODO: check if this actually implements Ex. 1.7.
+
 ; average procedure
 (define (average x y)
   (/ (+ x y) 2))
@@ -25,8 +27,3 @@
 	guess
       (sqrt-iter (improve guess) guess)))
   (sqrt-iter 1.0 x))
-
-; new-if procedure
-(define (new-if predicate then-clause else-clause)
-  (cond (predicate then-clause)
-	(else else-clause)))
