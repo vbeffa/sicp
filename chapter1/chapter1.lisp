@@ -125,12 +125,3 @@
 	c
       (f-iter (+ a (* 2 b) (* 3 c)) a b (- count 1))))
   (f-iter 3 2 1 n))
-
-;;;;;;;;;;;;;;;;;
-; Exercise 1.12 ;
-;;;;;;;;;;;;;;;;;
-
-(define (pascal x y)
-  (if (= x 1)
-      1
-    (
