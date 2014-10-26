@@ -2,6 +2,8 @@
 ; Exercise 1.1 ;
 ;;;;;;;;;;;;;;;;
 
+; What is the result printed by the interpreter in response to each expression?
+
 10
 ; 10
 

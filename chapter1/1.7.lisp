@@ -1,21 +1,16 @@
-; 1.1.7 Square Roots by Newton's Method
+;;;;;;;;;;;;;;;;
+; Exercise 1.7 ;
+;;;;;;;;;;;;;;;;
 
-; TODO: check if this actually implements Ex. 1.7.
-
-; average procedure
-(define (average x y)
-  (/ (+ x y) 2))
-
-(define (sqrt x)
-  (define (good-enough? guess)
-    (< (abs (- (square guess) x)) 0.001))
-  (define (improve guess)
-    (average guess (/ x guess)))
-  (define (sqrt-iter guess)
-    (if (good-enough? guess)
-	guess
-      (sqrt-iter (improve guess))))
-  (sqrt-iter 1.0))
+; The good-enough? test used in computing square roots will not be very effec-
+; tive for finding the square roots of very small numbers. Also, in real computers,
+; arithmetic operations are almost always performed with limited precision. This
+; makes our test inadequate for very large numbers. Explain these statements, with
+; examples showing how the test fails for small and large numbers. An alternative
+; strategy for implementing good-enough? is to watch how guess changes from
+; one iteration to the next and to stop when the change is a very small fraction of
+; the guess. Design a square-root procedure that uses this kind of end test. Does
+; this work better for small and large numbers?
 
 (define (sqrt2 x)
   (define (good-enough? guess old-guess)
